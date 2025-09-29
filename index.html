@@ -112,14 +112,14 @@
             border: none;
             display: block;
         }
-       
+
         /* <!-- PERUBAHAN DI SINI: CSS UNTUK TOMBOL DI ATAS GAMBAR --> */
         .image-button-container {
             position: relative;
             width: 100%;
             line-height: 0;
         }
-        
+
         /* GAYA DASAR/UMUM untuk semua tombol overlay */
         .overlay-button-link {
             position: absolute;
@@ -129,30 +129,38 @@
             display: block;
             transition: transform 0.2s ease-out;
         }
-        
+
         .overlay-button-link:hover {
-            transform: translateX(-50%) scale(1.05); /* Pastikan translateX tetap ada saat hover */
+            transform: translateX(-50%) scale(1.05);
+            /* Pastikan translateX tetap ada saat hover */
         }
-        
+
         /* GAYA SPESIFIK untuk setiap tombol - DI SINI ANDA BISA MENGATURNYA */
         .button-style-1 {
-            bottom: 5%;      /* Atur posisi vertikal dari bawah */
-            width: 55%;      /* Atur lebar tombol */
-            max-width: 250px;/* Atur lebar maksimal */
+            bottom: 5%;
+            /* Atur posisi vertikal dari bawah */
+            width: 55%;
+            /* Atur lebar tombol */
+            max-width: 250px;
+            /* Atur lebar maksimal */
         }
 
         .button-style-2 {
-            bottom: 60%;      /* Posisi berbeda */
-            width: 60%;      /* Lebar berbeda */
+            bottom: 60%;
+            /* Posisi berbeda */
+            width: 60%;
+            /* Lebar berbeda */
             max-width: 280px;
         }
 
         .button-style-3 {
-            bottom: 5%;     /* Posisi berbeda lagi */
-            width: 50%;      /* Lebar berbeda lagi */
+            bottom: 5%;
+            /* Posisi berbeda lagi */
+            width: 50%;
+            /* Lebar berbeda lagi */
             max-width: 240px;
         }
-        
+
         /* Mengembalikan style untuk gambar tombol agar bisa diklik dan selalu terlihat */
         .overlay-button-img {
             pointer-events: auto !important;
@@ -160,6 +168,7 @@
             opacity: 1 !important;
             background-color: transparent !important;
         }
+
         /* <!-- AKHIR PERUBAHAN CSS --> */
 
         /* Floating Button Styles */
@@ -212,6 +221,7 @@
                 min-height: 100vh;
                 background-color: #f5f7fa;
             }
+
             .image-stack-wrapper {
                 margin: 0;
                 box-shadow: 0 0 30px var(--shadow-light);
@@ -225,41 +235,114 @@
             margin: 0 auto;
             overflow: hidden;
         }
+
         .slideshow-container .mySlides {
             display: none;
             width: 100%;
             animation: fadeEffect 1.5s;
         }
+
         .slideshow-container .mySlides img {
             width: 100%;
             height: auto;
             display: block;
         }
-        @keyframes fadeEffect { from { opacity: .4 } to { opacity: 1 } }
-        #slideshow1 .prev, #slideshow1 .next, #slideshow1 .dot-container { display: none; }
-        .slideshow-container .prev, .slideshow-container .next {
-            cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);
-            width: 44px; height: 44px; color: var(--text-light); background-color: rgba(0,0,0,0.3);
-            border-radius: 50%; user-select: none; display: flex; align-items: center; justify-content: center;
-            z-index: 10; border: none; opacity: 0; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        @keyframes fadeEffect {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
-        .slideshow-container:hover .prev, .slideshow-container:hover .next { opacity: 0.7; }
-        .slideshow-container .prev { left: 10px; }
-        .slideshow-container .next { right: 10px; }
-        .slideshow-container .prev:hover, .slideshow-container .next:hover {
-            background-color: rgba(0,0,0,0.7); opacity: 1; transform: translateY(-50%) scale(1.1);
+
+        #slideshow1 .prev,
+        #slideshow1 .next,
+        #slideshow1 .dot-container {
+            display: none;
         }
-        .slideshow-container .prev:active, .slideshow-container .next:active { transform: translateY(-50%) scale(0.95); }
-        .slideshow-arrow { fill: currentColor; width: 1em; height: 1em; }
+
+        .slideshow-container .prev,
+        .slideshow-container .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            color: var(--text-light);
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .slideshow-container:hover .prev,
+        .slideshow-container:hover .next {
+            opacity: 0.7;
+        }
+
+        .slideshow-container .prev {
+            left: 10px;
+        }
+
+        .slideshow-container .next {
+            right: 10px;
+        }
+
+        .slideshow-container .prev:hover,
+        .slideshow-container .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slideshow-container .prev:active,
+        .slideshow-container .next:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .slideshow-arrow {
+            fill: currentColor;
+            width: 1em;
+            height: 1em;
+        }
+
         .dot-container {
-            text-align: center; padding: 10px 0; position: absolute;
-            bottom: 5px; width: 100%; z-index: 5;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            z-index: 5;
         }
+
         .dot {
-            cursor: pointer; height: 10px; width: 10px; margin: 0 4px; background-color: rgba(255,255,255,0.5);
-            border-radius: 50%; display: inline-block; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.2);
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.2);
         }
-        .dot.active, .dot:hover { background-color: var(--primary-color); transform: scale(1.2); border-color: transparent; }
+
+        .dot.active,
+        .dot:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+            border-color: transparent;
+        }
     </style>
 </head>
 
@@ -267,23 +350,23 @@
 
     <div class="image-stack-wrapper">
         <img id="img1" src="assets/1.png" alt="Gambar Pembuka Landing Page" fetchpriority="high">
-        
+
         <!-- BUTTON 1 DI ATAS GAMBAR 2 -->
         <div class="image-button-container">
             <img src="assets/2.png" alt="Gambar informasi 2" loading="lazy">
             <!-- PERUBAHAN DI SINI: Menambahkan kelas "button-style-1" -->
-            <a href="#" class="overlay-button-link button-style-1" aria-label="Tombol Aksi 1">
+            <a href="#slideshow2" class="overlay-button-link button-style-1" aria-label="Tombol Aksi 1">
                 <img src="assets/button/button 1.png" class="overlay-button-img" alt="Tombol 1">
             </a>
         </div>
-        
+
         <img src="assets/3.png" alt="Gambar informasi 3" loading="lazy">
-        
+
         <!-- BUTTON 2 DI ATAS GAMBAR 4 -->
         <div class="image-button-container">
             <img src="assets/4.png" alt="Gambar informasi 4" loading="lazy">
             <!-- PERUBAHAN DI SINI: Menambahkan kelas "button-style-2" -->
-            <a href="#" class="overlay-button-link button-style-2" aria-label="Tombol Aksi 2">
+            <a href="#slideshow2" class="overlay-button-link button-style-2" aria-label="Tombol Aksi 2">
                 <img src="assets/button/button 2.png" class="overlay-button-img" alt="Tombol 2">
             </a>
         </div>
@@ -297,28 +380,36 @@
             <div class="mySlides"><img src="assets/paket/paket-hemat.png" alt="Paket Hemat"></div>
 
             <button class="prev" aria-label="Paket sebelumnya" onclick="plusSlides(2, -1)">
-                <svg class="slideshow-arrow" viewBox="0 0 24 24"> <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                <svg class="slideshow-arrow" viewBox="0 0 24 24">
+                    <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </button>
             <button class="next" aria-label="Paket berikutnya" onclick="plusSlides(2, 1)">
-                <svg class="slideshow-arrow" viewBox="0 0 24 24"> <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                <svg class="slideshow-arrow" viewBox="0 0 24 24">
+                    <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </button>
             <div class="dot-container" id="dots2"></div>
         </div>
 
         <img src="assets/5.png" alt="Gambar informasi 5" loading="lazy">
-        
+
         <!-- BUTTON 3 DI ATAS GAMBAR 6 -->
         <div class="image-button-container">
             <img src="assets/6.png" alt="Gambar informasi 6" loading="lazy">
             <!-- PERUBAHAN DI SINI: Menambahkan kelas "button-style-3" -->
-            <a href="#" class="overlay-button-link button-style-3" aria-label="Tombol Aksi 3">
+            <a href="#testimoni" class="overlay-button-link button-style-3" aria-label="Tombol Aksi 3">
                 <img src="assets/button/button 3.png" class="overlay-button-img" alt="Tombol 3">
             </a>
         </div>
+        <div id="testimoni">
+            <img src="assets/7.png" alt="Gambar informasi 7" loading="lazy">
+            <img src="assets/8.png" alt="Gambar informasi 8" loading="lazy">
+            <img src="assets/9.png" alt="Gambar informasi 9" loading="lazy">
+        </div>
 
-        <img src="assets/7.png" alt="Gambar informasi 7" loading="lazy">
-        <img src="assets/8.png" alt="Gambar informasi 8" loading="lazy">
-        <img src="assets/9.png" alt="Gambar informasi 9" loading="lazy">
     </div> <!-- Akhir dari image-stack-wrapper -->
 
     <script>
@@ -393,4 +484,5 @@
         });
     </script>
 </body>
+
 </html>
